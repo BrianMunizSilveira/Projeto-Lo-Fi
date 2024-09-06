@@ -1,0 +1,211 @@
+/* Definição de variáveis */
+:root {
+    --cor-fundo-principal: #F9F7F3;
+    --cor-destaque-1: #F20574;
+    --cor-destaque-2: #AEE1F9;
+    --cor-destaque-3: #021859;
+    --cor-texto: #fff;
+    --cor-secundaria: #D8BFD8;
+    --cor-texto-claro: #ffffff;
+    --padding-conteudo: 50px;
+    --fonte-titulo: 36px;
+    --transicao-suave: 0.6s ease-out;
+}
+
+/* Estilos gerais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo-principal);
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+main {
+    min-height: 100vh;
+    background-color: var(--cor-destaque-3);
+}
+
+/* Títulos */
+h1, h2 {
+    color: var(--cor-texto-claro);
+}
+
+/* Parallax Container */
+.parallax {
+    background-image: url('../src/img/parallax-1.gif');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax h1 {
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px var(--cor-destaque-2);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* Seções de conteúdo */
+.content {
+    padding: var(--padding-conteudo);
+    text-align: center;
+    background-color: var(--cor-destaque-3);
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity var(--transicao-suave), transform var(--transicao-suave);
+}
+
+.content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content h2 {
+    font-size: var(--fonte-titulo);
+    color: var(--cor-destaque-1);
+    margin-bottom: 20px;
+}
+
+.content p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--cor-texto);
+}
+
+/* Lista */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 800px;
+}
+
+li {
+    font-size: 18px;
+    text-align: left;
+    color: var(--cor-texto-claro);
+}
+
+strong {
+    color: var(--cor-destaque-1);
+}
+
+/* Estilos para o footer */
+footer {
+    background-color: var(--cor-destaque-3);
+    color: var(--cor-texto-claro);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.footer-content a {
+    color: var(--cor-destaque-1);
+    text-decoration: underline;
+    transition: color var(--transicao-suave);
+}
+
+.footer-content a:hover {
+    color: var(--cor-destaque-2);
+}
+
+i {
+    color: #7fff00;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .parallax {
+        height: 80vh;
+        background-attachment: scroll;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    .content h2 {
+        font-size: 30px;
+    }
+
+    .content p {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        height: 70vh;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .content h2 {
+        font-size: 26px;
+    }
+
+    .content p {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .parallax {
+        height: 60vh;
+        background-attachment: scroll;
+    }
+
+    .parallax h1 {
+        font-size: 28px;
+    }
+
+    .content {
+        padding: 25px;
+    }
+
+    .content h2 {
+        font-size: 22px;
+    }
+
+    .content p {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    li {
+        font-size: 14px;
+    }
+}
