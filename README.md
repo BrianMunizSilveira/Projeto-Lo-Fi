@@ -1,5 +1,7 @@
 # O que é Lo-Fi?
 
+[Gif](./src/img/parallax-5.gif)
+
 Este projeto explora o mundo do Lo-Fi, um estilo musical conhecido por sua baixa fidelidade e sons envolventes. O site apresenta informações sobre o que é Lo-Fi, suas origens, evolução, principais influenciadores e oferece uma visão geral sobre este estilo musical.
 
 ## Como usar
