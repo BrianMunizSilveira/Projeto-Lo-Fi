@@ -1,0 +1,86 @@
+/* 
+=========================
+   Media Queries
+========================= 
+*/
+@media (max-width: 1024px) {
+    .parallax {
+        height: 80vh;
+        background-attachment: scroll;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    .content h2 {
+        font-size: 30px;
+    }
+
+    .content p {
+        max-width: 90%;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        height: 70vh;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .content h2 {
+        font-size: 26px;
+    }
+
+    .content p {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    .info-container {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .info-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .info-text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .parallax {
+        height: 60vh;
+        background-attachment: scroll;
+    }
+
+    .parallax h1 {
+        font-size: 28px;
+    }
+
+    .content {
+        padding: 25px;
+    }
+
+    .content h2 {
+        font-size: 22px;
+    }
+
+    .content p {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    li {
+        font-size: 14px;
+    }
+}

@@ -32,3 +32,35 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
+
+function toggleInfo() {
+    var infoContainer = document.querySelector('.info-container');
+    infoContainer.classList.toggle('active');
+}
+
+// Função para atualizar a data de modificação
+document.addEventListener('DOMContentLoaded', function() {
+    var dataAtualizacao = new Date(document.lastModified);
+    var dia = dataAtualizacao.getDate().toString().padStart(2, '0');
+    var mes = (dataAtualizacao.getMonth() + 1).toString().padStart(2, '0'); // Meses começam do zero
+    var ano = dataAtualizacao.getFullYear();
+    document.getElementById('data-atualizacao').textContent = `${dia}/${mes}/${ano}.`;
+});
+
+// Retornar ao topo 
+
+ // Seleciona a seta
+ const scrollToTopBtn = document.getElementById('scrollToTop');
+
+ // Função para mostrar/esconder o botão
+ const toggleScrollToTopBtn = () => {
+     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+         scrollToTopBtn.classList.add('visible');
+     } else {
+         scrollToTopBtn.classList.remove('visible');
+     }
+ };
+
+ // Adiciona os eventos
+ window.addEventListener('scroll', toggleScrollToTopBtn);
+ scrollToTopBtn.addEventListener('click', scrollToTop);
